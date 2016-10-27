@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Home of the Future</h2>
+<a href="" class="prediction">
+    <span id="reply"></span>
+    <img src="~/Content/crystal-ball-32381_960_720.png"/>
+</a>
+
+@* Replace with hover so that reply appears inside crystal ball image on hover *@
+@*<button>Click Me</button>
+    <p id="reply"></p>*@
+
+<script>
+    $(document).ready(function () {
+        //$("button").click(function () {
+        //alert("yep, works");
+
+        $("img").hover(function () {
+            $.get("@Url.Action("ShakeBall","Home")", function (response) {
+                $("#reply").text(response);
+            });
+        });
+        //});
+    });
+</script>
