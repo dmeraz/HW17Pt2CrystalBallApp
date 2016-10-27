@@ -17,31 +17,26 @@ textarea {
 }
 
 /*Style crystal ball to show prediction in the middle on hover*/
-/*Source: http://jsfiddle.net/HAcE2/*/
-.prediction{
-    position: relative;
-    padding: 0;
-    width:300px;
-    display:block;
-}
-#reply{
-    position: absolute;
-    top: 0;
-    /*color:#f00;
-    background-color:rgba(255,255,255,0.8);*/
-    width: 300px;
-    /*height: 100px;*/
-    /*line-height:100px;*/
-    text-align: center;
-    z-index: 10;
-    /*opacity: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;*/
-}
+/*Source1: http://jsfiddle.net/HAcE2/ */
+/*Source2: http://jsfiddle.net/c32jud6j/ */
 img {
-    z-index:1;
+    width: 300px;
+}
+
+.wrapper {
+    position: relative;
+}
+
+#reply {
+    position: absolute; 
+    top:120px;
+    width:300px;
+    text-align:center;
+    display: none;
+}
+
+.wrapper:hover #reply {
+    display: block;
 }
 
 
